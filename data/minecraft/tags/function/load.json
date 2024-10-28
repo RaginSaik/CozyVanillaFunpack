@@ -1,0 +1,7 @@
+{
+  "values":[
+	"jumppad:init",
+	"elytratemp:init",
+	"qol:init"
+  ]
+}

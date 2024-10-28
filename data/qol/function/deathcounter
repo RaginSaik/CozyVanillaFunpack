@@ -1,0 +1,2 @@
+scoreboard objectives add Tode deathCount "Tode"
+scoreboard objectives setdisplay list Tode
