@@ -1,1 +1,1 @@
-say Jumppad-Datapack loaded
+tellraw @a "Jumppad-Datapack loaded"

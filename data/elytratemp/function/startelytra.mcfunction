@@ -1,2 +1,4 @@
-execute as @a[x=0,z=0,dx=0,dz=0] run say hi
-execute positioned 0 ~ 0 if entity @p[distance=..1] run say lol
+execute at @a[x=3,y=86,z=3,dx=-6,dy=0,dz=-6,nbt=!{Inventory:[{Slot:102b}]}] run item replace entity @p armor.chest with elytra[unbreakable={},item_name='{"bold":true,"color":"aqua","italic":true,"text":"Einweg Elytra"}'] 1
+execute unless entity @a[x=3,dx=-6,y=85,dy=2,z=3,dz=-6] run clear @a[nbt={OnGround:1b,Inventory:[{id:"minecraft:elytra",components:{"minecraft:unbreakable":{}}}]}] elytra[unbreakable={},item_name='{"bold":true,"color":"aqua","italic":true,"text":"Einweg Elytra"}']
+title @a[x=3,dx=-6,y=85,dy=2,z=3,dz=-6,nbt=!{Inventory:[{id:"minecraft:elytra",Slot:102b}]}] actionbar {"bold":true,"color":"dark_aqua","text":"Ziehe deine Chestplate aus, um eine Elytra zu erhalten"}
+execute at @a[x=0,dx=0,y=85,dy=2,z=0,dz=0,nbt={Inventory:[{id:"minecraft:elytra",Slot:102b}]}] run effect give @p minecraft:levitation 1 80 true
