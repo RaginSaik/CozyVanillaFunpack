@@ -4,7 +4,7 @@ scoreboard players enable @a cameraoff
 execute as @a[scores={cameraon=1}] run gamemode spectator @s
 execute as @a[scores={cameraon=1}] run scoreboard players add playersincam cameracounter 1
 execute as @a[scores={cameraon=1}] run scoreboard players operation @s cameratp = playersincam cameracounter
-execute at @a[scores={cameraon=1}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["camtemp","camera"]}
+execute at @a[scores={cameraon=1}] run summon minecraft:armor_stand ~ ~-0.2 ~ {Invulnerable:true,NoBasePlate:true,NoGravity:true,ShowArms:true,Small:true,Rotation:[15f],Pose:{Head:[8f,0f,0f],LeftLeg:[283f,347f,354f],RightLeg:[281f,1f,5f],LeftArm:[339f,0f,9f],RightArm:[333f,0f,354f]},ArmorItems:[{id:"leather_boots",Count:1,components:{dyed_color:{rgb:5243046}}},{id:"leather_leggings",Count:1,components:{dyed_color:{rgb:5243046}}},{id:"leather_chestplate",Count:1,components:{dyed_color:{rgb:5243046}}},{id:"player_head",Count:1,components:{profile:{name:"turtle_helmet"}}}],HandItems:[{id:"minecraft:spyglass",Count:1},{}],Tags:["camtemp","camera"]}
 scoreboard players operation @e[type=armor_stand,tag=camtemp,tag=camera] cameratp = playersincam cameracounter
 tag @e[type=armor_stand,tag=camtemp,tag=camera] remove camtemp
 execute as @a[scores={cameraon=1}] run scoreboard players add @s cameraon 1
